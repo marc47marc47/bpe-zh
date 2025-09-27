@@ -1,0 +1,6 @@
+/target
+/log
+/out
+/tmp
+*.log
+*.swp
