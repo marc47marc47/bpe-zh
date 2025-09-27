@@ -24,6 +24,15 @@ The tool uses subcommands (`percentage` or `frequency`) to determine its behavio
 
 ### Run example
 ```bash
+$ cat sample01.txt
+劉奶奶找牛奶奶買牛奶，
+牛奶奶給劉奶奶拿牛奶，
+劉奶奶說牛奶奶的牛奶不如柳奶奶的牛奶，
+牛奶奶說柳奶奶的牛奶會流奶，
+柳奶奶聽見了大罵牛奶奶你的才會流奶，
+柳奶奶和牛奶奶潑牛奶嚇壞了劉奶奶，
+大罵再也不買柳奶奶和牛奶奶的牛奶。
+
 $ sh test-sample01.sh
     Finished `release` profile [optimized] target(s) in 0.06s
      Running `target/release/bpe-zh frequency -f sample01.txt -n 2`
