@@ -149,3 +149,32 @@ During the final refactoring, several noteworthy technical challenges were encou
 *   **`println!` Formatting String Error**: In one of the fixes, an unrecognizable non-ASCII character was accidentally introduced into a `println!` format string, leading to an `invalid format string` compilation error. This simple mistake serves as a reminder to be extra cautious during copy-pasting or rapid code editing, especially with strings.
 
 Through these iterations and fixes, the code reached a stable, well-structured, and powerful state.
+
+
+### Run example
+```bash
+$ sh test-sample01.sh
+    Finished `release` profile [optimized] target(s) in 0.06s
+     Running `target/release/bpe-zh frequency -f sample01.txt -n 2`
+🚀 **BPE 演算法開始**
+初始 Token 數量: 114
+模式: Frequency | 目標: 最高頻率 <= 2
+═══════════════════════════════════════
+**Step 1**: 最常見組合 `奶 + 奶` 出現 **16** 次
+  ├─ 合併後 Token 數量: 98
+**Step 2**: 最常見組合 `牛 + 奶奶` 出現 **7** 次
+  ├─ 合併後 Token 數量: 91
+**Step 3**: 最常見組合 `牛 + 奶` 出現 **7** 次
+  ├─ 合併後 Token 數量: 84
+**Step 4**: 最常見組合 `柳 + 奶奶` 出現 **5** 次
+  ├─ 合併後 Token 數量: 79
+**Step 5**: 最常見組合 `的 + 牛奶` 出現 **4** 次
+  ├─ 合併後 Token 數量: 75
+**Step 6**: 最常見組合 `劉 + 奶奶` 出現 **4** 次
+  ├─ 合併後 Token 數量: 71
+✅ **目標達成**: 最高頻率 (2) 已滿足目標 (<= 2).
+═══════════════════════════════════════
+🎯 **最終結果**: [劉奶奶, 找, 牛奶奶, 買, 牛奶, ，, ⎵, 牛奶奶, 給, 劉奶奶, 拿, 牛奶, ，, ⎵, 劉奶奶, 說, 牛奶奶, 的牛奶, 不, 如, 柳奶奶, 的牛奶, ，, ⎵, 牛奶奶, 說, 柳奶奶, 的牛奶, 會, 流, 奶, ，, ⎵, 柳奶奶, 聽, 見, 了, 大, 罵, 牛奶奶, 你, 的, 才, 會, 流, 奶, ，, ⎵, 柳奶奶, 和, 牛奶奶, 潑, 牛奶, 嚇, 壞, 了, 劉奶奶, ，, ⎵, 大, 罵, 再, 也, 不, 買, 柳奶奶, 和, 牛奶奶, 的牛奶, 。, ⎵]
+Token 數量: 114 → 71
+
+```
